@@ -1,0 +1,79 @@
+editing message of a commit :
+
+==> git commit --amend -m " somethin else "
+
+==================================================================
+
+undo new codes that are in stage leve :
+
+==> git checkout FILENAME
+
+==================================================================
+
+when we accidently left off a file that we meant to commit:
+
+==> git commit --amend
+
+==================================================================
+
+copying a commit to another branch :
+
+==> copy hash of the commit 
+==> checkout to the destination branch
+==> git cherry-pick (THE HASH)
+
+==================================================================
+
+git reset --soft (THE HASH) :
+
+==> removes the commit but keeps changes in stage area and the does't remove from files.
+ (when the changes are in green color)
+
+==================================================================
+
+git reset --mixed (THE HASH):
+
+==> removes the commit but keeps changes in files and in pre level of stage area 
+(when the changes are in red color)
+
+==================================================================
+
+git reset --hard (THE HASH):
+
+==> completely removes the changes both in files and stage area
+	like never you add any thing
+
+==================================================================
+git stash save "your message or note":
+
+==>save changes temporarily.
+
+==================================================================
+
+git stash list:
+
+==> this command lists save stashs 
+
+==================================================================
+
+git stash apply ID
+
+==> applys the temporary changes that you had made and was hiden in the stash list
+
+==================================================================
+
+git stash drop ID:
+
+==> this command removes the stash you need to delete.
+
+==================================================================
+
+
+
+
+
+
+
+
+
+
