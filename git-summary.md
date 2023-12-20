@@ -51,7 +51,8 @@ ohterwise you can delete the branch.
 * to go into another branch (go from main branch to the new one ):
   ```
   git checkout branch_name
-  ```
+  ```  
+> !!note!! : if you are in the branch 'a' and you have not commited yet and change the branch to 'b' the new changes will go from branch 'a' to branch 'b'. so becareful not todo that.  
   
 * edit a branch's name :
 ```
@@ -68,4 +69,22 @@ if you are satisfied with the changes, you can merge them with the main branch. 
 ```
 git merge branch_name  
 ```
+
+## checkout (a weak command to back to past commits) :
+if you want to goback to review a commit in the past through your logs (for instance you want to review two previous versions of a file thaat you have commited).
+you can even make changes in the commit that you are reviewing by checkout command and commit it, but when you go to main again, the changes will be discard.
+```
+git checkout commit_id
+```
+after done reviewing, you can go back to the main by following command
+```
+git checkout main
+```
+
+## revert (another command to go back to past commits) :
+by using this command you can discard the changes of a commit. for instance you have 4 commits, you don't want the last one so you can get the ID of the commit and use it in this following command :
+```
+git revert commit_id
+```
+> this command won't remove the selected commit. it only discads the changes of the commit. so the commit will be shown on the result of log command.
 
