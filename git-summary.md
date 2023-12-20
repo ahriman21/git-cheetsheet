@@ -86,5 +86,28 @@ by using this command you can discard the changes of a commit. for instance you 
 ```
 git revert commit_id
 ```
-> this command won't remove the selected commit. it only discads the changes of the commit. so the commit will be shown on the result of log command.
+> this command won't remove the selected commit. it only discads the changes of the commit. so the commit will be shown on the result of log command.  
+> when you utilize revert command to go several commits backc, more likely you will encounter with conflicts. so you should use it when you want to revert the last commit.
+
+if you encounter conflicts you will have two choises :
+* cancel revert :
+```
+git revert --abort
+```
+* continue revert :
+```
+git revert --continue
+```
+
+## reset (the last command to back to past commits) :
+reset has 3 types.
+* --soft ==> it is going to move the files from commit area to staging eara.
+* --mixed ==> it is going to move the files from commit and staging area to unstaged area.
+* --hard ==> it is going to remove the changes compeletely. so you won't access those changes again.
+
+```
+git reset commit_id --soft
+```
+note that the commit's id or commit's hash you choose is the last commit you want to keep and all commits that are on top of the chosen commit will be impacted.
+
 
