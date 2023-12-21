@@ -110,6 +110,33 @@ git reset commit_id --soft
 ```
 note that the commit's id or commit's hash you choose is the last commit you want to keep and all commits that are on top of the chosen commit will be impacted.
 
+
+## stash :
+you can save your changes without commiting. for example you are working on a feature and you realize that you must have done other feature before that.
+so you can make stash (you don't need to add the changes to staging area).
+
+* how to stash your changes :
+```
+git stash save "your comment on the stash"
+```
+
+* see the list of stash :
+```
+git stash list
+```
+
+* go for the stored stash :
+```
+git stash apply stash_id
+```
+
+> stash id is displayed in `{}`
+
+* remove your stash list :
+```
+git stash clear
+```
+
 ## gitignore (to determine some files not to track and not to commit) :
 you can determine some files not to be tracked. to do that first you create a file named `.gitignore` and then put the path of the files you want to ignore them in the .gitignore
 * linux
@@ -129,13 +156,45 @@ linux :
 * open your terminal enter command `ssh-keygen`. it will ask you to enter a path and a passfrase, but you can leave them empty.
 * by default it will be stored in `/home/uername`
 * there is a hidden directory named `.ssh` in `/home/username`.
-* there are 3 files in it. you can use value of `id_rsa.pub` in webservices like github.
+* there are 3 files in it. you can use value of `id_rsa.pub` in webservices like github. onother file is `id_rsa` that is private.
+* now you should add the private ssh-key to your ssh-agent :  1-enter command `eval "$(ssh-agent -s)"`  2- enter `ssh-add ~/.ssh/id_rsa`
 * to use it in github go to `settings > ssh keys and gpg keys` click `on new ssh key` and put your ssh key.
 
-
-  
-  
+  > you can see detailed information in `https://docs.github.com/authentication/connecting-to-github-with-ssh`
 
 
+## push your files to github (upload your projects in github):
+1- first way of pushing
+```
+git push url_of_your_project_in_github branch_name  
+```
+2- second way of pushing
+```
+git remote add origin url_of_your_project_in_github
+git push -u origin branch_name
+```
+3- see the infomation of your origins :
+```
+git remote -v
+```
+
+## conflict (when two developers make change in same file)
+for example we have dveloper1 and developer2 and a file named main.py
+developer1 changes the first line of main.py to 'import x'
+developer2 changes the first line of main.py to 'import y'
+
+now they push the project and get conflict. to solve the conflict, use `git pull origin main`. this command brings both changes in local repository of developer and developer can decide which code should be there. after that developer should commit the change and push it to repository.
+
+## fork
+when you want to contribute with other's repository you can fork their repository by clicking on `fork` option beside the name of repository name.
+by forking another repository, the repository will be displayed in your github account.
+now you can clone the repository from your github and apply your changes. remember, you must create a branch and make the changes in your own branch.
+after that you can commit the changes and push it to your forked repository . rememer you must push the new branch that you created.
+finally you can click the `compare & pull request` option beside your forked repository, this will send the changes to original owner of the repository.
+
+
+## issue
+if you have a question or suggestion for the owner of a repository in github you can make a issue by clicking on `issues` tab and then `new issue` button.
+the owner can choose a label for your issue. and also he can close the issue after resolving it.
 
 
