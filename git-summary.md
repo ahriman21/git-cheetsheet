@@ -110,4 +110,32 @@ git reset commit_id --soft
 ```
 note that the commit's id or commit's hash you choose is the last commit you want to keep and all commits that are on top of the chosen commit will be impacted.
 
+## gitignore (to determine some files not to track and not to commit) :
+you can determine some files not to be tracked. to do that first you create a file named `.gitignore` and then put the path of the files you want to ignore them in the .gitignore
+* linux
+```
+touch .gitignore
+```
+* windows
+```
+echo.> .gitignore
+```
+> you can use `https://www.toptal.com/developers/gitignore` to generate gitignore files related to the programming language you are using.
+## ssh-key :
+An SSH key, also known as a Secure Shell key, is a pair of cryptographic keys used for secure communication over the SSH protocol. SSH keys are widely used for accessing remote servers and repositories, such as GitHub, without having to enter your password every time.
+
+## how to create a ssh key for you github account :
+linux :
+* open your terminal enter command `ssh-keygen`. it will ask you to enter a path and a passfrase, but you can leave them empty.
+* by default it will be stored in `/home/uername`
+* there is a hidden directory named `.ssh` in `/home/username`.
+* there are 3 files in it. you can use value of `id_rsa.pub` in webservices like github.
+* to use it in github go to `settings > ssh keys and gpg keys` click `on new ssh key` and put your ssh key.
+
+
+  
+  
+
+
+
 
