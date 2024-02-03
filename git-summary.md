@@ -18,7 +18,7 @@ git config --global user.email "x"
 ## to see the status of tracked files (the status of files):
 ```git status```
 
-## send files from stagin area back to unstage :
+## send files from staging area back to unstage :
 if you want to send back the files which are in staging area to the unstage area you can use this command:
 ```git restore --staged file_name```
 
@@ -71,8 +71,8 @@ git merge branch_name
 ```
 
 ## checkout (a weak command to back to past commits) :
-if you want to goback to review a commit in the past through your logs (for instance you want to review two previous versions of a file thaat you have commited).
-you can even make changes in the commit that you are reviewing by checkout command and commit it, but when you go to main again, the changes will be discard.
+if you want to goback to review a commit in the past through your logs (for instance you want to review two previous versions of a file that you have commited).
+you can even make changes in the commit that you are reviewing by checkout command and commit it, but when you go to main again, the changes will be discarded.
 ```
 git checkout commit_id
 ```
@@ -86,7 +86,7 @@ by using this command you can discard the changes of a commit. for instance you 
 ```
 git revert commit_id
 ```
-> this command won't remove the selected commit. it only discads the changes of the commit. so the commit will be shown on the result of log command.  
+> this command won't remove the selected commit. it only discads the changes of the commit.
 > when you utilize revert command to go several commits backc, more likely you will encounter with conflicts. so you should use it when you want to revert the last commit.
 
 if you encounter conflicts you will have two choises :
