@@ -198,3 +198,16 @@ if you have a question or suggestion for the owner of a repository in github you
 the owner can choose a label for your issue. and also he can close the issue after resolving it.
 
 
+## detached head
+* head :
+head always points to the latest commit. the latest commit that taken place in our branches.
+
+* detached head :
+when head is directly points to a commit that is not the latest commit. to do that you an use `git checkout <commit hash>`. why it is essential to know about it? because with this oporation we can move back to old versions of a project.
+
+the point is sometimes you need to go back to old versions and make some experimental changes, if you didn't satisfied with those changes in an old commit, you can leave it there and got to another commit. so those changes you made will be disapeard and won't be considered.
+
+in other scenarios you may want to go back to an old version or commit of your project and start to make changes and you want to keep them, so in this case you can make a branch out of it and later merge the main branch with that new branch by this command `git branch <new branch name>`
+
+
+
