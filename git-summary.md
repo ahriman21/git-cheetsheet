@@ -210,4 +210,6 @@ the point is sometimes you need to go back to old versions and make some experim
 in other scenarios you may want to go back to an old version or commit of your project and start to make changes and you want to keep them, so in this case you can make a branch out of it and later merge the main branch with that new branch by this command `git branch <new branch name>`
 
 
-
+## git pull VS git fetch :
+`git pull` will get the new files or modified files from remote repository in your local repository and merge it to your main branch immediately.
+in the other hand `git fetch` also gets the new files or modified files from your remote repository and put those in your working directory, so in this case you sould decide to merge files.
